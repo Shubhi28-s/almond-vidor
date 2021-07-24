@@ -83,9 +83,9 @@
                                         <li class="list-group-item">
                                             <span class="label label-default">Video Url (900px x 1600px)</span>
                                             @if(!empty(@$survey->video_url))
-                                            <a href="{{ @$survey->video_url }}" target="_blank">
-                                                <img class="pull-right" src="{{ @$survey->video_url }}" width="200px">
-                                            </a>
+                                            <video class="pull-right" id="autoplayMac" width="20%" height="20%" preload="auto" controls playsinline autobuffer muted>
+                                                <source src="{{ @$survey->video_url }}" type="video/mp4">
+                                            </video>
                                             @endif
                                         </li>
                                     </ul>

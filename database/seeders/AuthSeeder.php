@@ -35,7 +35,7 @@ class AuthSeeder extends Seeder
             config('permission.table_names.role_has_permissions'),
             config('permission.table_names.permissions'),
             config('permission.table_names.roles'),
-            'users',
+            // 'users',
             'password_histories',
             'password_resets',
         ]);

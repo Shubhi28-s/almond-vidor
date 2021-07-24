@@ -11,6 +11,8 @@ class Vingaje extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'vingages';
+
     protected $fillable = [
         'hexa_code',
         'desktop_image',
@@ -26,6 +28,6 @@ class Vingaje extends Model
 
     public function question()
     {
-        return $this->hasMany('App\Models\Survey', 'vingaje_id', 'id');
+        return $this->hasMany('App\Models\Survey', 'vingage_id', 'id');
     }
 }

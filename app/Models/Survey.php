@@ -11,7 +11,7 @@ class Survey extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'vingaje_id', 'hexa_code', 'question', 'answer', 'option_1', 'option_2', 'option_3',
+        'vingage_id', 'hexa_code', 'question', 'answer', 'option_1', 'option_2', 'option_3',
         'option_4', 'question_time', 'time', 'marks', 'user_id'
     ];
 }

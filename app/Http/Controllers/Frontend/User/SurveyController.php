@@ -69,36 +69,43 @@ class SurveyController extends Controller
                 $file = $request['desktop_image'];
                 $extension = $file->getClientOriginalExtension();
                 $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
-                Storage::disk('s3')->put('vingaje/' . $filename, fopen($file, 'r+'), 'public');
-                $user->desktop_image = env('Storage_path') . '/vingaje/' . $filename;
+                Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                $user->desktop_image = env('Storage_path') . '/vingage/' . $filename;
             }
             if (isset($request['mobile_image']) && !empty($request['mobile_image'])) {
                 $file = $request['mobile_image'];
                 $extension = $file->getClientOriginalExtension();
                 $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
-                Storage::disk('s3')->put('vingaje/' . $filename, fopen($file, 'r+'), 'public');
-                $user->mobile_image = env('Storage_path') . '/vingaje/' . $filename;
+                Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                $user->mobile_image = env('Storage_path') . '/vingage/' . $filename;
             }
             if (isset($request['login_desktop_image']) && !empty($request['login_desktop_image'])) {
                 $file = $request['login_desktop_image'];
                 $extension = $file->getClientOriginalExtension();
                 $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
-                Storage::disk('s3')->put('vingaje/' . $filename, fopen($file, 'r+'), 'public');
-                $user->login_desktop_image = env('Storage_path') . '/vingaje/' . $filename;
+                Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                $user->login_desktop_image = env('Storage_path') . '/vingage/' . $filename;
+            }
+            if (isset($request['video_url']) && !empty($request['video_url'])) {
+                $file = $request['video_url'];
+                $extension = $file->getClientOriginalExtension();
+                $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
+                Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                $user->video_url = env('Storage_path') . '/vingage/' . $filename;
             }
             if (isset($request['login_mobile_image']) && !empty($request['login_mobile_image'])) {
                 $file = $request['login_mobile_image'];
                 $extension = $file->getClientOriginalExtension();
                 $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
-                Storage::disk('s3')->put('vingaje/' . $filename, fopen($file, 'r+'), 'public');
-                $user->login_mobile_image = env('Storage_path') . '/vingaje/' . $filename;
+                Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                $user->login_mobile_image = env('Storage_path') . '/vingage/' . $filename;
             }
             if (isset($request['logo']) && !empty($request['logo'])) {
                 $file = $request['logo'];
                 $extension = $file->getClientOriginalExtension();
                 $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
-                Storage::disk('s3')->put('vingaje/' . $filename, fopen($file, 'r+'), 'public');
-                $user->logo = env('Storage_path') . '/vingaje/' . $filename;
+                Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                $user->logo = env('Storage_path') . '/vingage/' . $filename;
             }
 
             $user->save();
@@ -137,7 +144,7 @@ class SurveyController extends Controller
                             ],
                             [
                                 'user_id' =>  Auth::id(),
-                                'vingaje_id' => $survey->id,
+                                'vingage_id' => $survey->id,
                                 'hexa_code' => $survey->hexa_code,
                                 'question' => $video['question'],
                                 'answer' => $video['answer'],
