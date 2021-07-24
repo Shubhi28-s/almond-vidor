@@ -5,9 +5,22 @@
             <img src="https://dashboard.virtex.in/img/brand/logo.png" alt="Almond Virtex" style="z-index: 100;width: 80%;z-index: 100;height: 100%;text-align: center;margin: 7px auto;">
           </a>
         </li>
-        <!-- <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li> -->
       </ul>
     </div>
+
+    <!-- <div class="navbar-header expanded">
+      <ul class="nav navbar-nav flex-row">
+        <li class="nav-item mr-auto"><a href="#" class="navbar-brand router-link-active" target="_self"><span class="brand-logo">
+              <img src="https://dashboard.virtex.in/img/brand/logo.png" alt="logo" class=""></span>
+            <h2 class="brand-text"> Almond Virtex </h2>
+          </a></li>
+        <li class="nav-item nav-toggle"><a href="#" target="_self" class="nav-link modern-nav-toggle">
+            <img src="https://dashboard.virtex.in/img/brand/logo.png" alt="Almond Virtex" style="z-index: 100;width: 80%;z-index: 100;height: 100%;text-align: center;margin: 7px auto;">
+          </a>
+        </li>
+      </ul>
+    </div> -->
+
     <div class="shadow-bottom"></div>
     <div class="main-menu-content mt-4">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
@@ -18,10 +31,8 @@
         </li> -->
         <li class=" navigation-header"><span></span>
         </li>
-        <li class="{{ activeClass(Route::is('frontend.user.dashboard'), 'active') }}"><a href="{{ route('frontend.user.dashboard') }}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Dashboard">Home</span></a>
-        </li>
-        <li class="{{ activeClass(Route::is('frontend.user.survey.index'), 'active') }}"><a href="{{ route('frontend.user.survey.index') }}"><i class="feather icon-user"></i><span class="menu-item" data-i18n="Survey">Survey</span></a>
-        </li>
-
+        <li class="{{ activeClass(Route::is('frontend.user.dashboard'), 'active') }}"><a href="{{ route('frontend.user.dashboard') }}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Dashboard">Dashboard</span></a></li>
+        <li class="{{ activeClass(Route::is('frontend.user.survey.index'), 'active') }}"><a href="{{ route('frontend.user.survey.index') }}"><i class="feather icon-user"></i><span class="menu-item" data-i18n="Survey">Survey</span></a></li>
+        <li class="{{ activeClass(Route::is('frontend.user.survey.submissions'), 'active') }}"><a href="{{ route('frontend.user.survey.submissions') }}"><i class="feather icon-file"></i><span class="menu-item" data-i18n="Survey Submission">Submission</span></a></li>
     </div>
   </div>

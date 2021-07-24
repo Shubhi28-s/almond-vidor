@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend\User;
 use App\Domains\Auth\Models\User;
 use App\Http\Controllers\Controller;
 use App\Models\Survey;
+use App\Models\SurveySubmission;
 use App\Models\Vingaje;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -199,6 +200,26 @@ class SurveyController extends Controller
             return redirect()->back()->withFlashSuccess('Data has been deleted successfully.');
         } catch (\Exception $e) {
             return redirect()->back()->withFlashDanger('Some thing went wrong:- ' . $e->getMessage());
+        }
+    }
+
+    public function surveySubmissionsAction(Request $request)
+    {
+        try {
+            if ($request->ajax()) {
+                $models = SurveySubmission::orderBy('id', 'DESC');
+
+                $datatable = DataTables::eloquent($models)->addColumn("operations", function ($row) {
+                    // return view('frontend.survey._partials.action', compact('row'));
+                })->addIndexColumn();
+
+                $datatable->rawColumns(['operations']);
+                $datatable = $datatable->make(true);
+                return $datatable;
+            }
+            return view('frontend.survey.submission');
+        } catch (\Exception $e) {
+            return $e->getMessage();
         }
     }
 }
