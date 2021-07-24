@@ -48,7 +48,7 @@
 
                                             <div class="form-group">
                                                 <label for="video_url" class=" form-control-label">Video</label>
-                                                <input name="video_url" type="file" id="video_url" value="{{ old('video_url') }}" accept="video/*" class="form-control" required>
+                                                <input name="video_url" type="file" id="video_url" value="{{ old('video_url') }}" accept=".mp4" class="form-control" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="first_popup" class=" form-control-label">First Popup</label>

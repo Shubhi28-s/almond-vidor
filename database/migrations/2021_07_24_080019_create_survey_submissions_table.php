@@ -19,7 +19,7 @@ class CreateSurveySubmissionsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('delegate_id')->unsigned();
             $table->foreign('delegate_id')->references('id')->on('delegates')->onDelete('cascade');
-            $table->bigInteger('vingage_id')->unsigned();
+            $table->bigInteger('vingage_id')->unsigned()->nullable();
             $table->foreign('vingage_id')->references('id')->on('vingages')->onDelete('cascade');
             $table->bigInteger('survey_id')->unsigned();
             $table->foreign('survey_id')->references('id')->on('surveys')->onDelete('cascade');
