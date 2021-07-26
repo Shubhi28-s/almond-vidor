@@ -24,14 +24,12 @@
                                                     <tr role="row">
                                                         <th>Sr. No</th>
                                                         <th>Hexa Code</th>
-                                                        <th>First Popup</th>
-                                                        <th>Last Popup</th>
-                                                        <th>Desktop Image</th>
-                                                        <th>Mobile Image</th>
-                                                        <th>Login Desktop Image</th>
-                                                        <th>Login Mobile Image</th>
-                                                        <th>Logo</th>
-                                                        <th>Action</th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Number</th>
+                                                        <th>Total Marks</th>
+                                                        <th>Obtain Marks</th>
+                                                        <!-- <th>Action</th> -->
                                                     </tr>
                                                 </thead>
                                             </table>
@@ -67,54 +65,31 @@
                 "name": 'hexa_code'
             },
             {
-                "data": "first_popup",
-                "name": 'first_popup'
+                "data": "delegate.name",
+                "name": 'delegate.name'
             },
             {
-                "data": "last_popup",
-                "name": 'last_popup'
+                "data": "delegate.email",
+                "name": 'delegate.email'
             },
             {
-                "data": "desktop_image",
-                "name": 'desktop_image',
-                "render": function(data) {
-                    return "<a href=\"" + data + "\" target='_blank'><img src= \"" + data + "\" width='150'></a>";
-                }
+                "data": "delegate.number",
+                "name": 'delegate.number'
             },
             {
-                "data": "mobile_image",
-                "name": 'mobile_image',
-                "render": function(data) {
-                    return "<a href=\"" + data + "\" target='_blank'><img src= \"" + data + "\" width='150'></a>";
-                }
+                "data": "survey_sum_marks",
+                "name": 'survey_sum_marks',
             },
             {
-                "data": "login_desktop_image",
-                "name": 'login_desktop_image',
-                "render": function(data) {
-                    return "<a href=\"" + data + "\" target='_blank'><img src= \"" + data + "\" width='150'></a>";
-                }
+                "data": "submission_sum_obtain_marks",
+                "name": 'submission_sum_obtain_marks',
             },
-            {
-                "data": "login_mobile_image",
-                "name": 'login_mobile_image',
-                "render": function(data) {
-                    return "<a href=\"" + data + "\" target='_blank'><img src= \"" + data + "\" width='150'></a>";
-                }
-            },
-            {
-                "data": "logo",
-                "name": 'logo',
-                "render": function(data) {
-                    return "<a href=\"" + data + "\" target='_blank'><img src= \"" + data + "\" width='150'></a>";
-                }
-            },
-            {
-                "data": "operations",
-                "name": "operations",
-                'orderable': false,
-                'searchable': false
-            },
+            // {
+            //     "data": "operations",
+            //     "name": "operations",
+            //     'orderable': false,
+            //     'searchable': false
+            // },
         ];
 
         var order = [

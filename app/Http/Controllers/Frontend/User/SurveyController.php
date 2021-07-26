@@ -264,7 +264,8 @@ class SurveyController extends Controller
     {
         try {
             if ($request->ajax()) {
-                $models = SurveySubmission::orderBy('id', 'DESC');
+                $models = SurveySubmission::with('delegate')->withSum('survey', 'marks')
+                    ->withSum('submission', 'obtain_marks')->groupBy('delegate_id')->orderBy('id', 'DESC');
 
                 $datatable = DataTables::eloquent($models)->addColumn("operations", function ($row) {
                     // return view('frontend.survey._partials.action', compact('row'));
@@ -274,9 +275,6 @@ class SurveyController extends Controller
                 $datatable = $datatable->make(true);
                 return $datatable;
             }
-
-
-            // return  $models = SurveySubmission::with('delegate')->orderBy('id', 'DESC')->get();
 
             return view('frontend.survey.submission');
         } catch (\Exception $e) {

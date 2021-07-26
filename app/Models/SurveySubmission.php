@@ -14,8 +14,19 @@ class SurveySubmission extends Model
         'obtain_marks', 'status'
     ];
 
+    public function submission()
+    {
+        return $this->hasMany('App\Models\SurveySubmission', 'hexa_code', 'hexa_code')
+            ->where('status', 1);
+    }
+
     public function delegate()
     {
         return $this->hasOne('App\Models\Delegate', 'id', 'delegate_id');
+    }
+
+    public function survey()
+    {
+        return $this->hasMany('App\Models\Survey', 'hexa_code', 'hexa_code');
     }
 }
