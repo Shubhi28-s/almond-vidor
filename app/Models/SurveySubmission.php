@@ -13,4 +13,9 @@ class SurveySubmission extends Model
         'user_id', 'delegate_id', 'vingage_id', 'survey_id', 'hexa_code', 'option_answer',
         'obtain_marks', 'status'
     ];
+
+    public function delegate()
+    {
+        return $this->hasOne('App\Models\Delegate', 'id', 'delegate_id');
+    }
 }

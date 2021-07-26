@@ -123,6 +123,12 @@ class SurveyController extends Controller
         return view('frontend.survey.edit', compact('survey'));
     }
 
+    public function surveyCampaignInfo($id)
+    {
+        $survey = Vingaje::whereId($id)->first();
+        return view('frontend.survey.createInfo', compact('survey'));
+    }
+
     public function update(Request $request, $id)
     {
         $rules = [
@@ -136,6 +142,57 @@ class SurveyController extends Controller
         try {
 
             $survey = Vingaje::whereId($id)->first();
+
+            if (isset($request->info) && $request->info == "info") {
+                $survey->first_popup = $request->get('first_popup');
+                $survey->last_popup = $request->get('last_popup');
+
+                if (isset($request['desktop_image']) && !empty($request['desktop_image'])) {
+                    $file = $request['desktop_image'];
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
+                    Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                    $survey->desktop_image = env('Storage_path') . '/vingage/' . $filename;
+                }
+                if (isset($request['mobile_image']) && !empty($request['mobile_image'])) {
+                    $file = $request['mobile_image'];
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
+                    Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                    $survey->mobile_image = env('Storage_path') . '/vingage/' . $filename;
+                }
+                if (isset($request['login_desktop_image']) && !empty($request['login_desktop_image'])) {
+                    $file = $request['login_desktop_image'];
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
+                    Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                    $survey->login_desktop_image = env('Storage_path') . '/vingage/' . $filename;
+                }
+                if (isset($request['video_url']) && !empty($request['video_url'])) {
+                    $file = $request['video_url'];
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
+                    Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                    $survey->video_url = env('Storage_path') . '/vingage/' . $filename;
+                }
+                if (isset($request['login_mobile_image']) && !empty($request['login_mobile_image'])) {
+                    $file = $request['login_mobile_image'];
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
+                    Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                    $survey->login_mobile_image = env('Storage_path') . '/vingage/' . $filename;
+                }
+                if (isset($request['logo']) && !empty($request['logo'])) {
+                    $file = $request['logo'];
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = str_replace(' ', '', str_replace('.', '', microtime())) . '.' . $extension;
+                    Storage::disk('s3')->put('vingage/' . $filename, fopen($file, 'r+'), 'public');
+                    $survey->logo = env('Storage_path') . '/vingage/' . $filename;
+                }
+
+                $survey->save();
+            }
+
             if (!empty($request->data) && (count($request->data) > 0)) {
                 foreach ($request->data as $video) {
                     if (!empty($video['question']) && !empty($video['answer'])) {
@@ -217,6 +274,10 @@ class SurveyController extends Controller
                 $datatable = $datatable->make(true);
                 return $datatable;
             }
+
+
+            // return  $models = SurveySubmission::with('delegate')->orderBy('id', 'DESC')->get();
+
             return view('frontend.survey.submission');
         } catch (\Exception $e) {
             return $e->getMessage();

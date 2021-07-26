@@ -32,6 +32,7 @@ Route::group(['as' => 'user.', 'middleware' => ['auth', 'password.expires', conf
 
 
     Route::resource('survey', SurveyController::class);
+    Route::get('Campaign/{id}/info', [SurveyController::class, 'surveyCampaignInfo'])->name('survey.campaign.info');
     Route::get('add_more_question', [SurveyController::class, 'addMoreQuestionAction'])->name('survey.add_more_question');
     Route::get('deleting', [SurveyController::class, 'deleteSection'])->name('survey.deleteSection');
     Route::get('submissions', [SurveyController::class, 'surveySubmissionsAction'])->name('survey.submissions');
