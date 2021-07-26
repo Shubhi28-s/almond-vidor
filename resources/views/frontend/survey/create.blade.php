@@ -1,6 +1,6 @@
 @extends('frontend.layouts.expo')
 
-@section('title', __('Add Survey'))
+@section('title', __('Add Campaign'))
 
 @section('content')
 <div class="app-content content">
@@ -16,7 +16,7 @@
                         @include('includes.partials.messages')
                         <div class="card">
                             <div class="card-header d-flex justify-content-between pb-0">
-                                <h3 class="card-title">Create Survey</h3>
+                                <h3 class="card-title">Create Campaign</h3>
                             </div>
                             <div class="card-body card-block">
                                 <div class="row form-group">
@@ -87,5 +87,18 @@
     $(function() {
         $('.loader_class').hide();
     })
+
+    $(document).on('change', '#video_url', function() {
+        var data = $(this).val();
+        var files = $(this)[0].files[0];
+        // console.log(files.size);
+        //            52428800 = 50 Mb
+        if (files.size > 104857600) {
+            alert('please upload max 100 MB Size.');
+            $(this).val('');
+            return false;
+        }
+        return true;
+    });
 </script>
 @endsection

@@ -32,7 +32,7 @@
         <li class=" navigation-header"><span></span>
         </li>
         <li class="{{ activeClass(Route::is('frontend.user.dashboard'), 'active') }}"><a href="{{ route('frontend.user.dashboard') }}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Dashboard">Dashboard</span></a></li>
-        <li class="{{ activeClass(Route::is('frontend.user.survey.index'), 'active') }}"><a href="{{ route('frontend.user.survey.index') }}"><i class="feather icon-user"></i><span class="menu-item" data-i18n="Survey">Survey</span></a></li>
-        <li class="{{ activeClass(Route::is('frontend.user.survey.submissions'), 'active') }}"><a href="{{ route('frontend.user.survey.submissions') }}"><i class="feather icon-file"></i><span class="menu-item" data-i18n="Survey Submission">Submission</span></a></li>
+        <li class="{{ activeClass(Route::is('frontend.user.survey.index'), 'active') }}"><a href="{{ route('frontend.user.survey.index') }}"><i class="feather icon-user"></i><span class="menu-item" data-i18n="Campaign">Campaign</span></a></li>
+        <li class="{{ activeClass(Route::is('frontend.user.survey.submissions'), 'active') }}"><a href="{{ route('frontend.user.survey.submissions') }}"><i class="feather icon-file"></i><span class="menu-item" data-i18n="campaign Submission">Submission</span></a></li>
     </div>
   </div>

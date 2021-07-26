@@ -37,7 +37,7 @@
                     <div class="col-md-6 col-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between pb-0">
-                                <h4 class="card-title">Total Schedule Meetings</h4>
+                                <h4 class="card-title">Total Campaign</h4>
                                 <div class="dropdown chart-dropdown">
 
                                 </div>
@@ -59,7 +59,7 @@
                     <div class="col-md-6 col-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between pb-0">
-                                <h4 class="card-title">Total CallBack Requests</h4>
+                                <h4 class="card-title">Total Question</h4>
                                 <div class="dropdown chart-dropdown">
 
                                 </div>
@@ -88,7 +88,7 @@
                                         <div class="col-lg-6 col-12 d-flex justify-content-between flex-column order-lg-1 order-2 mt-lg-0 mt-2">
                                             <div>
                                                 <h2 class="text-bold-700 mb-25">0</h2>
-                                                <p class="text-bold-500 mb-75">Clicked Broucher Downloads</p>
+                                                <p class="text-bold-500 mb-75">Total Submission</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12 d-flex justify-content-between flex-column text-right order-lg-2 order-1">
@@ -110,7 +110,7 @@
                                         <div class="col-lg-6 col-12 d-flex justify-content-between flex-column order-lg-1 order-2 mt-lg-0 mt-2">
                                             <div>
                                                 <h2 class="text-bold-700 mb-25">0</h2>
-                                                <p class="text-bold-500 mb-75">Watched Videos</p>
+                                                <p class="text-bold-500 mb-75">Total Correct</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12 d-flex justify-content-between flex-column text-right order-lg-2 order-1">

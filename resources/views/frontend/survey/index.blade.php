@@ -1,6 +1,6 @@
 @extends('frontend.layouts.expo')
 
-@section('title', __('Survey Dashboard'))
+@section('title', __('Campaign Dashboard'))
 
 @section('content')
 <div class="app-content content">
@@ -17,7 +17,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-sm-5"></div>
-                                <a class="btn btn-outline-success pull-right" href="{{ route('frontend.user.survey.create') }}" target="_self" title="Add Polls"><i class="fa fa-plus"></i> Add Survey</a>
+                                <a class="btn btn-outline-success pull-right" href="{{ route('frontend.user.survey.create') }}" target="_self" title="Add Polls"><i class="fa fa-plus"></i> Add Campaign</a>
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -27,7 +27,7 @@
                                                 <thead>
                                                     <tr role="row">
                                                         <th>Sr. No</th>
-                                                        <th>Hexa Code</th>
+                                                        <th>Campaign Code</th>
                                                         <th>First Popup</th>
                                                         <th>Last Popup</th>
                                                         <th>Desktop Image</th>
@@ -56,6 +56,19 @@
 <script type="text/javascript">
     var list_table_tab;
     var hidden_columns = true;
+  
+    // $(document)[0].oncontextmenu = function() {
+    //     return false;
+    // }
+    // $(document).mousedown(function(e) {
+    //     console.log(e.button);
+    //     if (e.button == 2) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // });
+
     jQuery(function() {
         var tu = "{{ route('frontend.user.survey.index') }}";
         if (jQuery(window).width() <= 375) {

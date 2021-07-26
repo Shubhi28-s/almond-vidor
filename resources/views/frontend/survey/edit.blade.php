@@ -1,6 +1,6 @@
 @extends('frontend.layouts.expo')
 
-@section('title', __('Edit Survey Dashboard'))
+@section('title', __('Edit Campaign Dashboard'))
 
 @section('content')
 
@@ -19,7 +19,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div>
-                                    <h4 class="card-title">Survey Details</h4>
+                                    <h4 class="card-title">Campaign Details</h4>
                                 </div>
                             </div>
                             <div class="card-content collapse show">

@@ -86,11 +86,12 @@
         </div>
         <!--top-right-->
 
+
         <div class="content">
             @include('includes.partials.messages')
 
             <div class="title m-b-md">
-                <span>Vingaje</span>
+                <span>Vingage</span>
             </div>
             <!--title-->
         </div>
