@@ -2,7 +2,7 @@
     <div class="navbar-header">
       <ul class="nav navbar-nav flex-row">
         <li class="nav-item m-auto"><a class="navbar-brand" style="margin-top:0px;" href="{{ route('frontend.user.dashboard') }}">
-            <img src="https://dashboard.virtex.in/img/brand/logo.png" alt="Almond Virtex" style="z-index: 100;width: 80%;z-index: 100;height: 100%;text-align: center;margin: 7px auto;">
+            <img src="https://almondvirtex.s3.ap-south-1.amazonaws.com/gpi/logo.png" alt="Almond Virtex" style="z-index: 100;width: 85%;z-index: 100;height: 100%;text-align: center;margin: 30px auto;">
           </a>
         </li>
       </ul>
@@ -11,11 +11,11 @@
     <!-- <div class="navbar-header expanded">
       <ul class="nav navbar-nav flex-row">
         <li class="nav-item mr-auto"><a href="#" class="navbar-brand router-link-active" target="_self"><span class="brand-logo">
-              <img src="https://dashboard.virtex.in/img/brand/logo.png" alt="logo" class=""></span>
+              <img src="https://almondvirtex.s3.ap-south-1.amazonaws.com/gpi/logo.png" alt="logo" class=""></span>
             <h2 class="brand-text"> Almond Virtex </h2>
           </a></li>
         <li class="nav-item nav-toggle"><a href="#" target="_self" class="nav-link modern-nav-toggle">
-            <img src="https://dashboard.virtex.in/img/brand/logo.png" alt="Almond Virtex" style="z-index: 100;width: 80%;z-index: 100;height: 100%;text-align: center;margin: 7px auto;">
+            <img src="https://almondvirtex.s3.ap-south-1.amazonaws.com/gpi/logo.png" alt="Almond Virtex" style="z-index: 100;width: 80%;z-index: 100;height: 100%;text-align: center;margin: 7px auto;">
           </a>
         </li>
       </ul>

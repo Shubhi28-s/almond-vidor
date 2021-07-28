@@ -46,7 +46,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-sm-2 col-12 d-flex flex-column flex-wrap text-center">
-                                            <h1 class="font-large-2 text-bold-700 mt-2 mb-0">0</h1>
+                                            <h1 class="font-large-2 text-bold-700 mt-2 mb-0">196</h1>
                                         </div>
                                         <div class="col-sm-10 col-12 d-flex justify-content-center">
                                             <div id="support-tracker-chart"></div>
@@ -68,7 +68,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-sm-2 col-12 d-flex flex-column flex-wrap text-center">
-                                            <h1 class="font-large-2 text-bold-700 mt-2 mb-0">0</h1>
+                                            <h1 class="font-large-2 text-bold-700 mt-2 mb-0">15093</h1>
                                         </div>
                                         <div class="col-sm-10 col-12 d-flex justify-content-center">
                                             <div id="support-tracker-chart-one"></div>
@@ -87,7 +87,7 @@
                                     <div class="row pb-50">
                                         <div class="col-lg-6 col-12 d-flex justify-content-between flex-column order-lg-1 order-2 mt-lg-0 mt-2">
                                             <div>
-                                                <h2 class="text-bold-700 mb-25">0</h2>
+                                                <h2 class="text-bold-700 mb-25">2031087</h2>
                                                 <p class="text-bold-500 mb-75">Total Submission</p>
                                             </div>
                                         </div>
@@ -109,7 +109,7 @@
                                     <div class="row pb-50">
                                         <div class="col-lg-6 col-12 d-flex justify-content-between flex-column order-lg-1 order-2 mt-lg-0 mt-2">
                                             <div>
-                                                <h2 class="text-bold-700 mb-25">0</h2>
+                                                <h2 class="text-bold-700 mb-25">1692838</h2>
                                                 <p class="text-bold-500 mb-75">Total Correct</p>
                                             </div>
                                         </div>
