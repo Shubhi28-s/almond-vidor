@@ -16,6 +16,7 @@
                                     </div><span><img class="round" src="{{ $logged_in_user->avatar }}" alt="avatar" height="40" width="40"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
+                                   
                                     <a class="dropdown-item" href="{{ route('frontend.user.dashboard') }}"><i class="feather icon-user"></i> Dashboard</a>
                                     <div class="dropdown-divider"></div>
 

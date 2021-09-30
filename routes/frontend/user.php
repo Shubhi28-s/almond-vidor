@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\DashboardController;
+use App\Http\Controllers\Frontend\User\FormController;
+use App\Http\Controllers\Frontend\User\FormListController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\User\SurveyController;
 use Tabuna\Breadcrumbs\Trail;
@@ -36,4 +38,28 @@ Route::group(['as' => 'user.', 'middleware' => ['auth', 'password.expires', conf
     Route::get('add_more_question', [SurveyController::class, 'addMoreQuestionAction'])->name('survey.add_more_question');
     Route::get('deleting', [SurveyController::class, 'deleteSection'])->name('survey.deleteSection');
     Route::get('submissions', [SurveyController::class, 'surveySubmissionsAction'])->name('survey.submissions');
+
+    Route::post('videoInfo', [FormController::class, 'slideValuesStore'])->name('formSaveSubmit');
+
+    Route::get('add-info', [FormController::class, 'addInfo'])->name('information');
+    Route::post('save-info', [FormController::class, 'storeInfo'])->name('saved');
+    Route::post('data-info', [FormController::class, 'saveData'])->name('submission');
+    Route::get('show-list', [FormController::class, 'show'])->name('fetch');
+    Route::get('delete/{id}', [FormController::class, 'destroy']);
+    Route::get('edit/{id}', [FormController::class, 'edit']);
+    Route::put('update/{id}', [FormController::class, 'update'])->name('new');
+    Route::get('Active/{id}', [FormController::class, 'Active']);
+    Route::get('InActive/{id}', [FormController::class, 'InActive']);
+    Route::get('viewVideo/{id}', [FormController::class, 'Video'])->name('display');    
+    // Route::get('viewVideo/{id}', [FormController::class, 'Video'])->name('display');
+    Route::get('videos/{id}', [FormController::class, 'embed'])->name('watch');
+    // Route::get('details',[FormController::class,'showDetails']);
+    //  Route::get('editValues/{id}', [FormController::class, 'editValues']);
+ Route::get('updateValues/{id}', [FormController::class, 'updateValues']);
+    Route::delete('deleteSlides/{id}', [FormController::class, 'deleteSlides']);
+    // Route::post('slideStore', [FormController::class, 'slideValuesStore']);
+    Route::get('fetchData/{id}', [FormController::class, 'fetchData']);
+ 
+
+    
 });
