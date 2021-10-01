@@ -24,7 +24,7 @@
 
     .iframe video {
         width: 100%;
-        height: 350px;
+        height: 410px;
         background: black;
     }
 
@@ -323,33 +323,7 @@
                                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                                 <script src="js/bootstrap.min.js"></script>
                                 <script type="text/javascript">
-                                    // function confirmFunction() {
-
-                                    //     if (confirm("Do you want to delete this?") == true) {
-                                    //         {
-                                    //             //alert("User wants to continue!");
-
-                                    //             return true;
-                                    //         }
-
-                                    //     } else {
-
-                                    //         // alert("User  doesnt wants to continue!");
-                                    //         return false;
-                                    //     }
-
-                                    // }
-
-                                    //    var newvalue;
-
-                                    //                                     function myfunction(id) {
-                                    //                                         alert(oldvalue);
-                                    //                                         newvalue = document.getElementById("vid").value;
-                                    //                                         oldvalue = newvalue;
-                                    //                                     }
-
-                                    //                                     var oldvalue = document.getElementById("vid").value;
-
+                           
 
                                     $(document).ready(function() {
                                         $("#table_field").on('click', '#remove', function() {
@@ -449,28 +423,7 @@
 
                                     }
 
-                                    // $(document).on('click', '#remove', function {
-
-
-                                    //             if (confirm("Do you really want to delete this?")) {
-                                    //                 $.ajax({
-                                    //                     type: "delete",
-                                    //                     url: '/deleteSlides' + id,
-                                    //                     data: {
-                                    //                         "_token": "{{csrf_token()}}",
-                                    //                         "id": $(this).data('id')
-                                    //                     },
-                                    //                     datatype: "json",
-                                    //                     success: function(response) {
-                                    //                         table.ajax.reload();
-                                    //                     }
-
-
-                                    //                 })
-                                    //             }
-
-
-                                    // });
+                    
                                     const deletedata = (id) => {
                                         if (confirm("Do you really want to delete this?")) {
                                             console.log(id);

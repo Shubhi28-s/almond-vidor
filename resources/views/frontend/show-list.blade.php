@@ -35,8 +35,8 @@
 
 
                             </div>
-                            
-                            <div class="container" >
+
+                            <div class="container">
 
                                 <!-- <h2> Videos list </h2> -->
                                 <table class="table table-bordered shadow text-center table-string mt-3" style="background:#eee">
@@ -52,65 +52,63 @@
 
                                     </tr>
                                     @foreach ($posts as $post)
-                                      
+
                                     <tr>
                                         <td>{{$post->id}}</td>
                                         <td>{{$post->video_name}}</td>
                                         <td style="  display: block; width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
-"><a  href="{{$post->url}}?id= {{$post->id}}">  View content</a> </td>
+"><a href="{{$post->url}}?id= {{$post->id}}"> View content</a> </td>
                                         <td>
-                      <?php 
-                    if($post->status == 1){ ?>
-                        <a class="btn btn-success btn-sm"  href="/InActive/{{$post->id}}" ONCLICK="return ActiveFunction()"><i class="fa fa-user fa-lg"></i></a>
-                    <?php }
-                    else
-                    { ?>
-                        <a class="btn btn-danger btn-sm" href="/Active/{{$post->id}}"ONCLICK="return InActiveFunction()" ><i class="fa fa-user fa-lg"></i></a>
-                    <?php }
-                      ?>
+                                            <?php
+                                            if ($post->status == 1) { ?>
+                                                <a class="btn btn-success btn-sm" href="/InActive/{{$post->id}}" ONCLICK="return ActiveFunction()"><i class="fa fa-user fa-lg"></i></a>
+                                            <?php } else { ?>
+                                                <a class="btn btn-danger btn-sm" href="/Active/{{$post->id}}" ONCLICK="return InActiveFunction()"><i class="fa fa-user fa-lg"></i></a>
+                                            <?php }
+                                            ?>
 
-                    <script type="text/javascript">
-                    function ActiveFunction() {
-                        //  alert("hi");
-                        
-                        if (confirm("Do you want to inactive this?") == true) {
-                            {
-                                // alert("User wants to continue!");
-                                return true;
-                            }
+                                            <script type="text/javascript">
+                                                function ActiveFunction() {
+                                                    //  alert("hi");
 
-                        } else {
+                                                    if (confirm("Do you want to inactive this?") == true) {
+                                                        {
+                                                            // alert("User wants to continue!");
+                                                            return true;
+                                                        }
 
-                    
-                            return false;
-                        }
-                    }
-                </script>
+                                                    } else {
 
-<script type="text/javascript">
-                    function InActiveFunction() {
-                        // alert("hi");
-                        if (confirm("Do you want to active this?") == true) {
-                            {
-                                // alert("User wants to continue!");
-                                return true;
-                            }
 
-                        } else {
+                                                        return false;
+                                                    }
+                                                }
+                                            </script>
 
-                    
-                            return false;
-                        }
-                    }
-                </script>
+                                            <script type="text/javascript">
+                                                function InActiveFunction() {
+                                                    // alert("hi");
+                                                    if (confirm("Do you want to active this?") == true) {
+                                                        {
+                                                            // alert("User wants to continue!");
+                                                            return true;
+                                                        }
+
+                                                    } else {
+
+
+                                                        return false;
+                                                    }
+                                                }
+                                            </script>
 
 
 
-                </td>
+                                        </td>
 
-                      
-                <td><a href="viewVideo/{{$post->id}}"  class="btn btn-info btn-sm"><i class="fa fa-eye fa-lg"></i></a></td>                  
-                                        <td><a class="btn btn-danger btn-sm"  href="/delete/{{$post->id}}" ONCLICK=" return confirmFunction()"><i class="fa fa-trash"></i></a></td>
+
+                                        <td><a href="viewVideo/{{$post->id}}" class="btn btn-info btn-sm"><i class="fa fa-eye fa-lg"></i></a></td>
+                                        <td><a class="btn btn-danger btn-sm" href="/delete/{{$post->id}}" ONCLICK=" return confirmFunction()"><i class="fa fa-trash"></i></a></td>
 
                                         <script type="text/javascript">
                                             function confirmFunction() {
@@ -134,10 +132,10 @@
                                     @endforeach
                                 </table>
                             </div>
-                            </div>
-                            @endsection
+                        </div>
+                        @endsection
 
-                            </script>
-                            </body>
+                        </script>
+                        </body>
 
-                            </html>
+                        </html>
